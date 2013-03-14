@@ -1,0 +1,78 @@
+name: Profile
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  lastname :
+      type: 'VARCHAR (250)'
+  firstname :
+      type: 'VARCHAR (250)'
+  middlename :
+      type: 'VARCHAR (250)'
+  userId :
+      object: one
+      type: INT
+  birthday :
+      type: 'DATE'
+  birthdayIsPublic :
+      type: 'tinyint(1)'
+      options:
+        - "DEFAULT NULL"
+  sex :
+      type: 'tinyint(1)'
+  countryId :
+    object: one
+    type: INT
+  regionId :
+    object: one
+    type: INT
+  districtId :
+    object: one
+    type: INT
+  cityId :
+    object: one
+    type: INT
+  science :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+  religion :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+  sport :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+  music :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+  movie :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+  book :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+  created :
+        type: 'DATE'
+        form: text
+        label: "Дата создания"
+  updated :
+      type: 'DATE'
+      form: text
+      label: "Дата обновления"
+  deleted :
+      type: 'tinyint(1)'
+      form: text
+      label: "Удалено"
+      options:
+           - "DEFAULT NULL"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

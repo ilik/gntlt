@@ -1,0 +1,32 @@
+name: VuzEntranceExams
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  vuzSpecialityId:
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  schoolSubjectId:
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  score:
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Проходной балл"
+  date:
+    type : 'DATETIME'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

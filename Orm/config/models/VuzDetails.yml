@@ -1,0 +1,17 @@
+name: VuzDetails
+#if may be null then add field 'null' with val 'true'
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  description :
+    type: 'TEXT'
+    form: text
+    label: "Описание"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

@@ -1,0 +1,25 @@
+#отрасль
+#text
+#select
+#checkboxList
+#checkbox
+#textarea
+#radioButtonList
+#radioButton
+#hidden
+name: Department
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  name :
+    type: 'VARCHAR (50)'
+    form: text
+    label: "Наименование"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

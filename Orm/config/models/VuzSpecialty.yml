@@ -1,0 +1,61 @@
+name: VuzSpeciality
+#if may be null then add field 'null' with val 'true'
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  vuzId :
+    object: one
+    type: INT
+    form: hidden
+  vuzStructureId :
+    object: one
+    type: INT
+    form: hidden
+  specialityCategoryId :
+    object: one
+    type: INT
+    form: hidden
+  specialityId :
+    object: one
+    type: INT
+    form: hidden
+  level :
+    type: 'enum("бакалавр", "инженер", "магистр", "специалист")'
+    label: "Образовательный уровень"
+    form: select
+  formTraining:
+    type: 'enum("Очная форма", "Заочная форма")'
+    label: "Форма обучения"
+    form: select
+  department:
+    type: 'enum("Бюджетное отделение", "Коммерческое отделение")'
+    label: "Отделение"
+    form: select
+  periodTraining :
+    type: 'VARCHAR (50)'
+    label: "Срок обучения"
+    form: text
+  seats:
+    type: 'VARCHAR (50)'
+    label: "Срок обучения"
+    form: text
+  cost :
+    type: 'VARCHAR (50)'
+    label: "Стоимость"
+    form: text
+  startDocuments :
+    type: 'DATE'
+    label: "Дата начало подачи документов"
+    form: text
+  stopDocuments :
+    type: 'DATE'
+    label: "Конец начало подачи документов"
+    form: text
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

@@ -1,0 +1,27 @@
+name: City
+#if may be null then add field 'null' with val 'true'
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  countryId :
+    object: one
+    type: INT
+  districtId :
+    object: one
+    type: INT
+  regionId :
+    object: one
+    type: INT
+  title :
+    type: 'VARCHAR (50)'
+index:
+  - "INDEX `country_region` (`countryId`, `regionId`)"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'
+finder:
+  select:
+    - fields: [countryId,  districtId, regionId], type: many

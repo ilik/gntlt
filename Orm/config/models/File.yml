@@ -1,0 +1,27 @@
+name: File
+fields:
+  id    :
+      type: INT
+      form: hidden
+      options:
+        - "AUTO_INCREMENT"
+        - "NOT NULL"
+        - "PRIMARY KEY"
+  url  :
+      type: 'VARCHAR (50)'
+      form: text
+  name :
+      form: text
+      type: 'VARCHAR (200)'
+  ext :
+      type: 'VARCHAR (20)'
+      form: text
+  size:
+      type: 'VARCHAR (20)'
+      form: double
+  created :
+      type: 'DATE'
+      form: text
+      label: "Дата создания"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

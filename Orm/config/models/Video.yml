@@ -1,0 +1,55 @@
+name: Video
+fields:
+  id    :
+    type: INT
+    form: hidden
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  fileId  :
+      type: INT
+      form: hidden
+  ownerId :
+      form: hidden
+      type: INT
+  ownerType :
+      type: 'enum("user", "vuz")'
+      form: text
+      label: "Владелец"
+  title :
+      type: 'VARCHAR (50)'
+      form: text
+      label: "Наименование"
+  description :
+      type: 'TEXT'
+      form: text
+      label: "Описание"
+  link    :
+      type: 'TEXT'
+      form: text
+      label: "Ссылка"
+  iconId  :
+      form: hidden
+      type: INT
+  iconType  :
+      form: hidden
+      type: INT
+  created :
+      type: 'DATE'
+      form: text
+      label: "Дата создания"
+  updated :
+      type: 'DATE'
+      form: text
+      label: "Дата обновления"
+  deleted :
+      type: 'tinyint(1)'
+      form: text
+      label: "Удалено"
+      options:
+           - "DEFAULT NULL"
+  matherialId :
+      type: INT
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

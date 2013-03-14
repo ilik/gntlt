@@ -1,0 +1,13 @@
+name: Icon
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  path :
+    type: 'VARCHAR (200)'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

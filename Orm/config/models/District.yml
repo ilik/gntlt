@@ -1,0 +1,19 @@
+name: District
+#if may be null then add field 'null' with val 'true'
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  countryId :
+    object: one
+    type: INT
+  title :
+    type: 'VARCHAR (50)'
+engine: 'InnoDB'
+collate: 'utf8_general_ci'
+finder:
+  select:
+    - fields: [countryId], type: many

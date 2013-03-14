@@ -1,0 +1,103 @@
+name: MyVuz
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  countryId :
+    object: one
+    type: INT
+  districtId :
+    object: one
+    type: INT
+  regionId :
+    object: one
+    type: INT
+  cityId :
+    object: one
+    type: INT
+  vuzId :
+    object: one
+    type: INT
+  vuzTitle :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название вуза"
+  instituteId :
+    object: one
+    type: INT
+  instituteTitle :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название института"
+  academyId :
+    object: one
+    type: INT
+  academyTitle :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название академии"
+  facultyId :
+    object: one
+    type: INT
+  facultyTitle :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название факультета"
+  chairId :
+    object: one
+    type: INT
+  chairTitle :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название кафедры"
+  groupTitle :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название группы"
+  dateStart :
+    type: 'DATE'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Дата поступления"
+  dateStop :
+    type: 'DATE'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Дата выпуска"
+  medal :
+    type: 'enum("очная", "заочная", "очная-заочная", "вечерния")'
+    options:
+      - "DEFAULT NULL"
+    form: select
+    label: "Форма обучения"
+  status:
+    type: 'enum("Абитуриент", "Студент магистр", "Студент бакалавр", "Студент специалист", "Выпускник специалист", "Выпускник магистр", "Выпускник бакалавр", "Аспирант", "Преподаватель")'
+    options:
+      - "DEFAULT NULL"
+    form: select
+    label: "Статус"
+  deleted :
+    type: 'tinyint(1)'
+  date :
+    type : 'DATETIME'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

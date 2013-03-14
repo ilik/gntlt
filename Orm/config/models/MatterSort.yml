@@ -1,0 +1,19 @@
+#Вид материала
+name: MatterSort
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  matterTypeId :
+    object: one
+    type: INT
+  title :
+    type: 'VARCHAR (50)'
+  icon :
+    type: 'VARCHAR (50)'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

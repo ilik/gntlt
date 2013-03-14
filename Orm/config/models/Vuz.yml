@@ -1,0 +1,159 @@
+name: Vuz
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  countryId :
+    object: one
+    type: INT
+  districtId :
+    object: one
+    type: INT
+  regionId :
+    object: one
+    type: INT
+  cityId :
+    object: one
+    type: INT
+  photoId :
+    type: INT
+  title :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название"
+  titleReduction :
+    type: 'VARCHAR (255)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Аббревиатура"
+  description :
+    type: 'TEXT'
+    options:
+      - "DEFAULT NULL"
+    form: textarea
+    label: "Описание"
+  yearBase :
+    type: 'DATE'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Год основания"
+  address:
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Адрес"
+  site :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Сайт"
+  phone :
+    type: 'VARCHAR (50)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Телефон"
+  fax :
+    type: 'VARCHAR (50)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Факс"
+  email :
+    type: 'VARCHAR (50)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Почта"
+  licenseNumber :
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "№ лицензии"
+  licenseOrder :
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Приказ о выдаче лицензии"
+  licenseAuthority :
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Орган, издавший приказ"
+  licenseReallyDate :
+    type: 'DATE'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Лицензия действительна до"
+  accreditationNumber :
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "№ свидетельства об аккредитации"
+  accreditationOrder :
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Приказ об аккредитации"
+  accreditationAuthority :
+    type: 'VARCHAR (250)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Орган, издавший приказ"
+  accreditationReallyDate :
+    type: 'DATE'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Свидетельство действительно до"
+  timeCreate :
+    type : 'DATETIME'
+  timeUpdate :
+    type : 'DATETIME'
+  typeStructure:
+    type: INT
+  typeIdVuz :
+    type: INT
+  typeTitleVuz :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    label: "Тип вуза"
+  foundationCourses :
+    type: 'tinyint(1)'
+    options:
+      - "DEFAULT NULL"
+    form: "checkbox"
+    label: "Подготовительные курсы"
+  military :
+    type: 'tinyint(1)'
+    options:
+      - "DEFAULT NULL"
+    form: "checkbox"
+    label: "Военная кафедра"
+  hostel :
+    type: 'tinyint(1)'
+    options:
+      - "DEFAULT NULL"
+    form: "checkbox"
+    label: "Общежитие"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

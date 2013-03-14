@@ -1,0 +1,98 @@
+name: MySchool
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  userId:
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  countryId :
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  districtId :
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  regionId :
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  cityId :
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  schoolId :
+    object: one
+    type: INT
+    options:
+      - "DEFAULT NULL"
+    form: select
+  titleSchool :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название"
+  numberSchool :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Номер"
+  dateSupply :
+    type: 'DATETIME'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Дата поступления"
+  dateEnd :
+    type: 'DATETIME'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Дата поступления"
+  dateIssue :
+    type: 'DATETIME'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Дата поступления"
+  grade :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Класс"
+  specialization:
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Специализация"
+  medal :
+    type: 'tinyint(1)'
+    options:
+      - "DEFAULT NULL"
+    form: "checkbox"
+    label: "Медаль"
+  date :
+    type : 'DATETIME'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

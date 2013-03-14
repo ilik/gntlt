@@ -1,0 +1,14 @@
+#Авторы
+name: AudioExternal
+fields:
+  key :
+    type: 'VARCHAR (32)'
+    options:
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  filePath :
+    type: 'VARCHAR (50)'
+index:
+  - "INDEX `filePath_key` (`filePath`)"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

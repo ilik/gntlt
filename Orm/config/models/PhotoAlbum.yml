@@ -1,0 +1,42 @@
+name: PhotoAlbum
+fields:
+  id :
+    type: INT
+    form: hidden
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  ownerId :
+      form: hidden
+      type: INT
+  ownerType :
+      type: 'enum("user", "vuz")'
+      form: text
+      label: "Владелец"
+  title :
+      type: 'VARCHAR (50)'
+      form: text
+      label: "Наименование"
+  #privacy :
+  #    type: 'tinyint(1)'
+  #    options:
+  #      - "DEFAULT NULL"
+  albumFace :
+      type: INT
+      form: text
+      label: "Обложка"
+  updated :
+      type: 'DATE'
+      form: text
+      label: "Дата обновления"
+  deleted :
+      type: 'tinyint(1)'
+      form: text
+      label: "Удалено"
+      options:
+           - "DEFAULT NULL"
+index:
+  - "INDEX `albumFace` (`albumFace`)"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

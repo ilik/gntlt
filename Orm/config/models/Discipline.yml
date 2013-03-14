@@ -1,0 +1,17 @@
+#Дисциплина
+name: Discipline
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  departmentId :
+    object: one
+    type: INT
+  title :
+    type: 'VARCHAR (50)'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

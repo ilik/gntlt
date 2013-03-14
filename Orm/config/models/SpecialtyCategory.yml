@@ -1,0 +1,20 @@
+name: SpecialtyCategory
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  code :
+    type: INT
+    form: text
+    label: "Код"
+  title :
+    type: 'VARCHAR (50)'
+    form: text
+    label: "Название"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

@@ -1,0 +1,28 @@
+name: User
+#if may be null then add field 'null' with val 'true'
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  profileId :
+    object: one
+    type: INT
+  ownedProfileId :
+    object: many
+    type: INT
+  name :
+    type: 'VARCHAR(50)'
+  password :
+    type: 'VARCHAR (32)'
+  salt :
+    type: 'VARCHAR (32)'
+  email :
+    type: 'VARCHAR(50)'
+index:
+  - "INDEX `profileId` (`profileId`)"
+  - "INDEX `name_password` (`name`, `password`)"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

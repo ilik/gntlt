@@ -1,0 +1,20 @@
+#тип и сорт материала
+name: MatterTypeSort
+fields:
+  id :
+      type: INT
+      options:
+        - "AUTO_INCREMENT"
+        - "NOT NULL"
+        - "PRIMARY KEY"
+  typeId :
+    type: INT
+    options:
+      - "NOT NULL"
+  sortId :
+      type: INT
+      options:
+        - "NOT NULL"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

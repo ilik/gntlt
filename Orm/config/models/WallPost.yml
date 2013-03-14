@@ -1,0 +1,21 @@
+name: WallPost
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  userId :
+    object: one
+    type: INT
+  wallId :
+    object: one
+    type: INT
+  postText :
+    type: 'VARCHAR (250)'
+index:
+  - "INDEX `userId` (`userId`)"
+  - "INDEX `wallId` (`wallId`)"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

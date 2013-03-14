@@ -1,0 +1,14 @@
+#тип материала
+name: MatterType
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  title :
+    type: 'VARCHAR (50)'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

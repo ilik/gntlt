@@ -1,0 +1,130 @@
+name: Matherial
+fields:
+  id    :
+    type: INT
+    form: text
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  ownerId :
+      form: text
+      label: "Ид владельца"
+      type: INT
+  ownerType :
+      type: 'enum("user", "vuz")'
+      form: text
+      label: "Тип владельца"
+  title :
+      type: 'VARCHAR (80)'
+      form: text
+      label: "Наименование"
+  description :
+      type: 'TEXT'
+      form: text
+      label: "Описание"
+  typeId  :
+      object: many
+      form: select
+      label: "Тип материала"
+      type: INT
+  sortId  :
+      object: many
+      form: select
+      label: "Вид материала"
+      type: INT
+  branchId  :
+      object: many
+      form: select
+      label: "Отрасль"
+      type: INT
+  disciplineId  :
+      object: many
+      form: select
+      label: "Дисциплина"
+      type: INT
+  iconId  :
+      label: "ИД иконки"
+      form: text
+      type: INT
+  iconType  :
+      label: "Тип иконки"
+      form: select
+      type: INT
+  year  :
+      form: text
+      type: 'DATE'
+      label: "Год публикации"
+  cost  :
+      form: text
+      type: INT
+      label: "Цена"
+  sum   :
+      form: text
+      type: INT
+      label: "Сумма"
+  valuteId  :
+      form: select
+      type: INT
+      label: "ИД валюты"
+  authorType  :
+      form: text
+      type: INT
+      label: "Тип автора"
+  authorId  :
+      object: many
+      form: text
+      label: "Ид автора"
+      type: INT
+  countAudio  :
+      form: text
+      type: INT
+      label: "счетчик аудио"
+  audioId :
+      object: many
+      form: text
+      type: INT
+      label: "привязка к аудио"
+  countVideo  :
+      form: text
+      type: INT
+      label: "счетчик видео"
+  videoId :
+        object: many
+        form: text
+        type: INT
+        label: "привязка к видео"
+  countDocument  :
+      form: text
+      type: INT
+      label: "счетчик документов"
+  documentId :
+        object: many
+        form: text
+        type: INT
+        label: "привязка к документам"
+  countPhoto  :
+      form: text
+      type: INT
+      label: "счетчик фото"
+  photoId :
+        object: many
+        form: text
+        type: INT
+        label: "привязка к фото"
+  created :
+      type: 'DATE'
+      form: text
+      label: "Дата создания"
+  updated :
+      type: 'DATE'
+      form: text
+      label: "Дата обновления"
+  deleted :
+      type: 'tinyint(1)'
+      form: text
+      label: "Удалено"
+      options:
+           - "DEFAULT NULL"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

@@ -1,0 +1,23 @@
+#Авторы
+name: Authors
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+  name :
+    type: 'VARCHAR (50)'
+  surname :
+    type: 'VARCHAR (50)'
+  patronymic :
+    type: 'VARCHAR (50)'
+index:
+  - "INDEX `name_surname` (`name`, `surname`)"
+engine: 'InnoDB'
+collate: 'utf8_general_ci'
+finder:
+  select:
+    - fields: [name, surname], type: many
+    - fields: [name, surname, patronymic], type: many

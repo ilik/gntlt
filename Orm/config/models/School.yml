@@ -1,0 +1,36 @@
+name: School
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  countryId :
+    object: one
+    type: INT
+  districtId :
+    object: one
+    type: INT
+  regionId :
+    object: one
+    type: INT
+  cityId :
+    object: one
+    type: INT
+  title :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Название"
+  number :
+    type: 'VARCHAR (100)'
+    options:
+      - "DEFAULT NULL"
+    form: text
+    label: "Номер"
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'

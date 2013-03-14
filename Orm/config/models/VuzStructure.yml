@@ -1,0 +1,34 @@
+name: VuzStructure
+#if may be null then add field 'null' with val 'true'
+fields:
+  id :
+    type: INT
+    options:
+      - "AUTO_INCREMENT"
+      - "NOT NULL"
+      - "PRIMARY KEY"
+    form: hidden
+  vuzId :
+    object: one
+    type: INT
+    form: hidden
+  vuzStructureId :
+    object: many
+    type: INT
+    form: hidden
+  tableId :
+    type: 'enum("academy", "chair", "institute", "faculty")'
+  itemId :
+    type: INT
+  itemTitle :
+    type: 'VARCHAR (255)'
+    label: "Название"
+    form: text
+  detailsId :
+    object: one
+    type: INT
+  isParent :
+    type: 'tinyint(1)'
+index:
+engine: 'InnoDB'
+collate: 'utf8_general_ci'
